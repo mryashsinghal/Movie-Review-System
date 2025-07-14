@@ -1,0 +1,91 @@
+.review-item {
+  background: rgba(255,255,255,0.07);
+  border-radius: 10px;
+  margin-bottom: 1.2rem;
+  padding: 1.2rem 1.5rem;
+  box-shadow: 0 2px 8px rgba(44,62,80,0.10);
+  animation: fadeInReview 0.7s;
+  transition: box-shadow 0.3s, transform 0.2s;
+}
+
+.review-item:hover {
+  box-shadow: 0 4px 16px rgba(44,62,80,0.18);
+  transform: scale(1.02);
+}
+
+@keyframes fadeInReview {
+  from { opacity: 0; transform: translateY(20px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+.review-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.review-user {
+  font-weight: 600;
+  color: #ff512f;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+}
+
+.review-rating {
+  font-size: 1.2rem;
+  color: #ff512f;
+  letter-spacing: 2px;
+  user-select: none;
+}
+
+.review-text {
+  color: #fff;
+  font-size: 1.08rem;
+  margin-bottom: 0.7rem;
+  line-height: 1.5;
+  opacity: 0.95;
+}
+
+.review-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.review-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.08rem;
+  cursor: pointer;
+  padding: 0.3rem 0.8rem;
+  border-radius: 8px;
+  transition: background 0.2s, transform 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.review-btn.upvote:hover {
+  background: #ff512f22;
+  color: #ff512f;
+  transform: scale(1.1);
+}
+
+.review-btn.downvote:hover {
+  background: #dd247622;
+  color: #dd2476;
+  transform: scale(1.1);
+}
+
+.review-btn.delete:hover {
+  background: #ff000022;
+  color: #ff0000;
+  transform: scale(1.1);
+}
+
+.vote-count {
+  font-weight: 600;
+  font-size: 1rem;
+  margin-left: 2px;
+}
